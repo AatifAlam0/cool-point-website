@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Point Shahi Tukda - Jama Masjid</title>
+    <style>
+        /* Slideshow Background Animation */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            background-color: #0b0b0e;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-image: url('store1.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: slideShow 4s infinite;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba(11, 11, 14, 0.85); /* Dark overlay so text and gallery pop */
+        }
+
+        @keyframes slideShow {
+            0% { background-image: url('store1.jpg'); opacity: 1; }
+            45% { opacity: 1; }
+            50% { background-image: url('store2.jpg'); opacity: 1; }
+            95% { opacity: 1; }
+            100% { background-image: url('store1.jpg'); opacity: 1; }
+        }
+
+        header {
+            padding: 30px 20px 20px 20px;
+        }
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #ff007f;
+            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+            margin: 0;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .menu-grid, .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .menu-item {
+            background: rgba(22, 22, 29, 0.9);
+            border: 2px solid #39ff14;
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.8);
+        }
+        .menu-item h3 {
+            color: #39ff14;
+            text-shadow: 0 0 5px #39ff14;
+            margin-top: 0;
+        }
+        .price {
+            font-size: 1.3rem;
+            color: #ff007f;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .gallery-item {
+            background: rgba(22, 22, 29, 0.9);
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        h2 {
+            color: #00ffff;
+            text-shadow: 0 0 8px #00ffff;
+            margin-top: 50px;
+        }
+        .location {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(22, 22, 29, 0.9);
+            border-left: 5px solid #00ffff;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: transparent;
+            color: #39ff14;
+            border: 2px solid #39ff14;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            box-shadow: 0 0 10px #39ff14;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #39ff14;
+            color: #0b0b0e;
+            box-shadow: 0 0 20px #39ff14;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Cool Point Logo" class="logo-img">
+        <h1>Cool Point Shahi Tukda</h1>
+        <div class="subtitle">THE KING OF MUGHALAI SWEETS</div>
+    </header>
+
+    <div class="container">
+        <p>Welcome to the legendary destination near Jama Masjid for authentic, mouth-watering Shahi Tukda, Firni, and Ice Cream Soda!</p>
+
+        <h2>Our Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="food1.jpg" alt="Cool Point Gallery 1">
+            </div>
+            <div class="gallery-item">
+                <img src="food2.jpg" alt="Cool Point Gallery 2">
+            </div>
+            <div class="gallery-item">
+                <img src="food3.jpg" alt="Cool Point Gallery 3">
+            </div>
+            <div class="gallery-item">
+                <img src="food4.jpg" alt="Cool Point Gallery 4">
+            </div>
+            <div class="gallery-item">
+                <img src="food5.jpg" alt="Cool Point Gallery 5">
+            </div>
+            <div class="gallery-item">
+                <img src="food6.jpg" alt="Cool Point Gallery 6">
+            </div>
+        </div>
+
+        <h2>Our Specialities</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Classic Shahi Tukda</h3>
+                <p>Crispy fried bread soaked in sugar syrup, topped with thick rabri and dry fruits.</p>
+                <div class="price">₹90</div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Special Shahi Tukda with Ice Cream</h3>
+                <p>Our famous royal dessert served hot with a melting scoop of vanilla ice cream.</p>
+                <div class="price">₹120</div>
+            </div>
+
+            <div class="menu-item">
+                <h3>Matka Firni</h3>
+                <p>Traditional creamy rice pudding served chilled in a clay pot.</p>
+                <div class="price">₹60</div>
+            </div>
+        </div>
+
+        <div class="location">
+            📍 <strong>Location:</strong> Near Jama Masjid, Urdu Bazaar, Delhi-06
+        </div>
+
+        <br>
+        <a href="#" class="btn">Order / Visit Us</a>
+    </div>
+
+</body>
+</html>
