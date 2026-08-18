@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cool Point Shahi Tukda - Jama Masjid</title>
+    <title>Cool Point Shahi Tukda - Online Menu</title>
     <style>
         /* Slideshow Background Animation */
         body {
@@ -38,7 +38,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: rgba(11, 11, 14, 0.85); /* Dark overlay so text and gallery pop */
+            background: rgba(11, 11, 14, 0.5); 
         }
 
         @keyframes slideShow {
@@ -49,110 +49,171 @@
             100% { background-image: url('store1.jpg'); opacity: 1; }
         }
 
+        /* Zomato/Swiggy Header Banner Style */
         header {
-            padding: 30px 20px 20px 20px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(22,22,29,0.9));
+            padding: 25px 20px;
+            border-bottom: 2px solid #e23744; /* Zomato Red accent */
+            box-shadow: 0 4px 20px rgba(226, 55, 68, 0.3);
         }
+
         .logo-img {
-            max-width: 180px;
+            max-width: 130px;
             height: auto;
+            border-radius: 50%;
+            border: 3px solid #ff3b30;
             margin-bottom: 10px;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+            box-shadow: 0 0 15px rgba(255, 59, 48, 0.6);
         }
+
         h1 {
-            font-size: 2.5rem;
-            color: #ff007f;
-            text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 40px #ff007f;
+            font-size: 2.2rem;
+            color: #ffffff;
             margin: 0;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
         }
-        .subtitle {
-            font-size: 1.1rem;
-            color: #00ffff;
-            text-shadow: 0 0 5px #00ffff;
-            letter-spacing: 2px;
+
+        .tagline {
+            color: #aaa;
+            font-size: 0.95rem;
             margin-top: 5px;
         }
+
+        /* Delivery & Rating Badges */
+        .app-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid #ff3b30;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #ff3b30;
+        }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
-        .menu-grid, .gallery-grid {
+
+        h2 {
+            color: #ff3b30;
+            text-align: left;
+            border-bottom: 2px solid #ff3b30;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .menu-item {
-            background: rgba(22, 22, 29, 0.9);
-            border: 2px solid #39ff14;
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-        .menu-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(57, 255, 20, 0.8);
-        }
-        .menu-item h3 {
-            color: #39ff14;
-            text-shadow: 0 0 5px #39ff14;
-            margin-top: 0;
-        }
-        .price {
-            font-size: 1.3rem;
-            color: #ff007f;
-            font-weight: bold;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
             margin-top: 15px;
         }
+
         .gallery-item {
             background: rgba(22, 22, 29, 0.9);
-            border: 2px solid #00ffff;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s;
+            border: 1px solid #333;
+            transition: transform 0.2s;
         }
+
         .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+            transform: scale(1.03);
+            border-color: #ff3b30;
         }
+
         .gallery-item img {
             width: 100%;
-            height: 180px;
+            height: 110px;
             object-fit: cover;
             display: block;
         }
-        h2 {
-            color: #00ffff;
-            text-shadow: 0 0 8px #00ffff;
-            margin-top: 50px;
+
+        /* Food Item Card Style (Zomato/Swiggy List View) */
+        .food-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
         }
-        .location {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(22, 22, 29, 0.9);
-            border-left: 5px solid #00ffff;
-            display: inline-block;
-            border-radius: 5px;
+
+        .food-card {
+            background: rgba(22, 22, 29, 0.92);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: 0.2s;
         }
-        .btn {
-            background-color: transparent;
-            color: #39ff14;
-            border: 2px solid #39ff14;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 25px;
+
+        .food-card:hover {
+            border-color: #ff3b30;
+            box-shadow: 0 4px 15px rgba(226, 55, 68, 0.2);
+        }
+
+        .food-info h3 {
+            margin: 0 0 5px 0;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .food-info .desc {
+            color: #aaa;
+            font-size: 0.85rem;
+            margin: 0 0 8px 0;
+        }
+
+        .food-info .price {
+            color: #ff3b30;
             font-weight: bold;
-            display: inline-block;
-            margin-top: 30px;
-            box-shadow: 0 0 10px #39ff14;
-            transition: 0.3s;
+            font-size: 1.1rem;
         }
-        .btn:hover {
-            background-color: #39ff14;
-            color: #0b0b0e;
-            box-shadow: 0 0 20px #39ff14;
+
+        /* Add / Order Button */
+        .add-btn {
+            background-color: #e23744;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 0 10px rgba(226, 55, 68, 0.4);
+        }
+
+        .add-btn:hover {
+            background-color: #ff3b30;
+            box-shadow: 0 0 15px rgba(255, 59, 48, 0.8);
+            transform: scale(1.05);
+        }
+
+        .location-box {
+            margin-top: 40px;
+            background: rgba(22, 22, 29, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff3b30;
+            text-align: left;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -161,62 +222,65 @@
     <header>
         <img src="logo.png" alt="Cool Point Logo" class="logo-img">
         <h1>Cool Point Shahi Tukda</h1>
-        <div class="subtitle">THE KING OF MUGHALAI SWEETS</div>
+        <div class="tagline">Mughalai Sweets • Desserts • Ice Cream • Urdu Bazaar, Delhi</div>
+        
+        <div class="app-badges">
+            <div class="badge">⭐ 4.6 (500+ Ratings)</div>
+            <div class="badge">🕒 20-30 mins delivery</div>
+            <div class="badge">🔥 Popular Destination</div>
+        </div>
     </header>
 
     <div class="container">
-        <p>Welcome to the legendary destination near Jama Masjid for authentic, mouth-watering Shahi Tukda, Firni, and Ice Cream Soda!</p>
 
-        <h2>Our Gallery</h2>
+        <h2>What's on the Menu? (Photos)</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="food1.jpg" alt="Cool Point Gallery 1">
-            </div>
-            <div class="gallery-item">
-                <img src="food2.jpg" alt="Cool Point Gallery 2">
-            </div>
-            <div class="gallery-item">
-                <img src="food3.jpg" alt="Cool Point Gallery 3">
-            </div>
-            <div class="gallery-item">
-                <img src="food4.jpg" alt="Cool Point Gallery 4">
-            </div>
-            <div class="gallery-item">
-                <img src="food5.jpg" alt="Cool Point Gallery 5">
-            </div>
-            <div class="gallery-item">
-                <img src="food6.jpg" alt="Cool Point Gallery 6">
-            </div>
+            <div class="gallery-item"><img src="food1.jpg" alt="Item"></div>
+            <div class="gallery-item"><img src="food2.jpg" alt="Item"></div>
+            <div class="gallery-item"><img src="food3.jpg" alt="Item"></div>
+            <div class="gallery-item"><img src="food4.jpg" alt="Item"></div>
+            <div class="gallery-item"><img src="food5.jpg" alt="Item"></div>
+            <div class="gallery-item"><img src="food6.jpg" alt="Item"></div>
         </div>
 
-        <h2>Our Specialities</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <h3>Classic Shahi Tukda</h3>
-                <p>Crispy fried bread soaked in sugar syrup, topped with thick rabri and dry fruits.</p>
-                <div class="price">₹90</div>
+        <h2>Order Online / Recommended</h2>
+        <div class="food-list">
+            
+            <div class="food-card">
+                <div class="food-info">
+                    <h3>Classic Shahi Tukda</h3>
+                    <p class="desc">Crispy fried bread soaked in sugar syrup, topped with thick rabri and dry fruits.</p>
+                    <div class="price">₹90</div>
+                </div>
+                <button class="add-btn" onclick="alert('Item added to order list!')">ADD</button>
             </div>
 
-            <div class="menu-item">
-                <h3>Special Shahi Tukda with Ice Cream</h3>
-                <p>Our famous royal dessert served hot with a melting scoop of vanilla ice cream.</p>
-                <div class="price">₹120</div>
+            <div class="food-card">
+                <div class="food-info">
+                    <h3>Special Shahi Tukda with Ice Cream</h3>
+                    <p class="desc">Our famous royal dessert served hot with a melting scoop of vanilla ice cream.</p>
+                    <div class="price">₹120</div>
+                </div>
+                <button class="add-btn" onclick="alert('Item added to order list!')">ADD</button>
             </div>
 
-            <div class="menu-item">
-                <h3>Matka Firni</h3>
-                <p>Traditional creamy rice pudding served chilled in a clay pot.</p>
-                <div class="price">₹60</div>
+            <div class="food-card">
+                <div class="food-info">
+                    <h3>Matka Firni</h3>
+                    <p class="desc">Traditional creamy rice pudding served chilled in a clay pot.</p>
+                    <div class="price">₹60</div>
+                </div>
+                <button class="add-btn" onclick="alert('Item added to order list!')">ADD</button>
             </div>
+
         </div>
 
-        <div class="location">
-            📍 <strong>Location:</strong> Near Jama Masjid, Urdu Bazaar, Delhi-06
+        <div class="location-box">
+            📍 <strong>Outlet Location:</strong> Near Jama Masjid, Urdu Bazaar, Old Delhi - 110006<br>
+            🕒 <strong>Timing:</strong> 12:00 Noon to 12:00 Midnight (Open All Days)
         </div>
 
-        <br>
-        <a href="#" class="btn">Order / Visit Us</a>
     </div>
 
 </body>
-</html>
+</html>s
