@@ -86,6 +86,7 @@
             gap: 12px;
             margin-top: 15px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .badge {
@@ -117,6 +118,27 @@
         .insta-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 0 18px rgba(220, 39, 67, 0.9);
+        }
+
+        /* Call Button Style */
+        .call-btn {
+            background: #25d366;
+            color: white;
+            padding: 7px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 0 12px rgba(37, 211, 102, 0.6);
+            transition: 0.2s;
+        }
+
+        .call-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 18px rgba(37, 211, 102, 0.9);
         }
 
         .container {
@@ -257,6 +279,16 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+
+        .phone-highlight {
+            color: #25d366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .phone-highlight:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -269,9 +301,15 @@
         <div class="info-bar">
             <div class="badge">⭐ 4.6 (500+ Ratings)</div>
             <div class="badge">🕒 12 PM - 12 AM</div>
-            <!-- Live Instagram Link Button -->
+            
+            <!-- Instagram Link Button -->
             <a href="https://www.instagram.com/cool_point_shahi_tukda" target="_blank" class="insta-btn">
-                📷 Follow on Instagram
+                📷 Instagram
+            </a>
+
+            <!-- Direct Owner Call Button -->
+            <a href="tel:+919953833786" class="call-btn">
+                📞 Call Owner
             </a>
         </div>
     </header>
@@ -331,7 +369,8 @@
 
         <div class="info-box">
             📍 <strong>Main Outlet Location:</strong> Near Jama Masjid, Urdu Bazaar, Old Delhi, Delhi - 110006<br>
-            📞 <strong>Direct Visit / Dine-in:</strong> Open daily for food lovers looking for the authentic taste of Old Delhi. Check out our Instagram page for video reels of live preparation!
+            📞 <strong>Owner Contact:</strong> <a href="tel:+919953833786" class="phone-highlight">+91 99538 33786</a> (Click to direct call)<br>
+            🕒 <strong>Timing:</strong> 12:00 Noon to 12:00 Midnight (Open All Days)
         </div>
 
     </div>
